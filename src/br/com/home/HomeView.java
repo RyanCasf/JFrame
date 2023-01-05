@@ -10,6 +10,7 @@ import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
 import br.com.chooser.JFileChooser;
+import br.com.crud.CRUDExample;
 import br.com.table.SimpleTable;
 
 public class HomeView extends JFrame {
@@ -30,27 +31,36 @@ public class HomeView extends JFrame {
 	}
 	
 	public HomeView() {
+		setResizable(false);
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds(100, 100, 300, 80);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
 		
 		JButton btnChooser = new JButton("Chooser");
+		btnChooser.setBounds(10, 11, 89, 23);
 		btnChooser.addActionListener((ActionEvent e) -> {
 			JFileChooser chooser = new JFileChooser();
 			chooser.setVisible(true);
 		});
-		btnChooser.setBounds(10, 11, 89, 23);
+		contentPane.setLayout(null);
 		contentPane.add(btnChooser);
 		
 		JButton btnTabela = new JButton("Tabela");
+		btnTabela.setBounds(109, 11, 89, 23);
 		btnTabela.addActionListener((ActionEvent e) -> {
 				SimpleTable table = new SimpleTable();
 				table.setVisible(true);
 		});
-		btnTabela.setBounds(109, 11, 89, 23);
 		contentPane.add(btnTabela);
+		
+		JButton btnCRUD = new JButton("CRUD");
+		btnCRUD.setBounds(208, 11, 66, 23);
+		btnCRUD.addActionListener((ActionEvent e) -> {
+			CRUDExample crud = new CRUDExample();
+			crud.setVisible(true);
+		});
+		contentPane.add(btnCRUD);
 	}
 }
