@@ -1,14 +1,13 @@
 package br.com.crud;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
-import java.awt.GridLayout;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import javax.swing.JTextArea;
 
 public class CRUDExample extends JFrame {
 	private static final long serialVersionUID = 4352205922371063453L;
@@ -32,11 +31,11 @@ public class CRUDExample extends JFrame {
 		txtPosicao.setColumns(10);
 		
 		JLabel lblPosicao = new JLabel("Posi\u00E7\u00E3o:");
-		lblPosicao.setBounds(10, 65, 46, 14);
+		lblPosicao.setBounds(10, 65, 400, 14);
 		contentPane.add(lblPosicao);
 		
 		JLabel lblNewLabel_1 = new JLabel("Usu\u00E1rio:");
-		lblNewLabel_1.setBounds(10, 23, 46, 14);
+		lblNewLabel_1.setBounds(10, 23, 400, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		txtUsuario = new JTextField();
@@ -65,7 +64,7 @@ public class CRUDExample extends JFrame {
 		contentPane.add(txtAObservacao);
 		
 		JLabel lblObservacao = new JLabel("Posi\u00E7\u00E3o:");
-		lblObservacao.setBounds(10, 166, 46, 14);
+		lblObservacao.setBounds(10, 166, 406, 14);
 		contentPane.add(lblObservacao);
 	}
 }
